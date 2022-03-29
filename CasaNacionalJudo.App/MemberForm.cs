@@ -1,12 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
-using System.Drawing;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-using System.Windows.Forms;
+﻿using CasaNacionalJudo.Repository;
 
 namespace CasaNacionalJudo.App
 {
@@ -16,5 +8,18 @@ namespace CasaNacionalJudo.App
         {
             InitializeComponent();
         }
+
+        private void MemberForm_Load(object sender, EventArgs e)
+        {
+            LoadMembers();
+        }
+
+        #region Utilities
+        private void LoadMembers()
+        {
+            MemberRepository memberRepo = new();
+            dgvMembers.DataSource = memberRepo.GetAllMembers();
+        }
+        #endregion
     }
 }
