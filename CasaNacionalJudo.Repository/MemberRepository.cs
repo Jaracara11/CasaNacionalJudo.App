@@ -4,15 +4,15 @@ using Microsoft.Data.Sqlite;
 
 namespace CasaNacionalJudo.Repository
 {
-    public class MemberRepository : IMemberRepository
+    public class MemberRepository
     {
-        public async Task<IEnumerable<Member>> GetAllMembers()
+        public IEnumerable<Member> GetAllMembers()
         {
             var query = "SELECT * FROM members;";
 
             using var conn = new SqliteConnection(DbConnection.DbConn);
 
-            var result = await conn.QueryAsync<Member>(query);
+            var result = conn.Query<Member>(query);
 
             return result.ToList();
         }

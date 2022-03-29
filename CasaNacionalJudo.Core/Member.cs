@@ -2,8 +2,8 @@
 {
     public class Member
     {
-        public Guid MemberId { get; set; }
-        public Guid TutorId { get; set; }
+        public string MemberId { get; set; } = string.Empty;
+        public string TutorId { get; set; } = string.Empty;
         public string FirstName { get; set; } = string.Empty;
         public string LastName { get; set; } = string.Empty;
         public DateTime BirthDate { get; set; }
