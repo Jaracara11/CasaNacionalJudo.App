@@ -2,9 +2,9 @@
 
 namespace CasaNacionalJudo.App
 {
-    public partial class MemberForm : Form
+    public partial class BrowseMemberForm : Form
     {
-        public MemberForm()
+        public BrowseMemberForm()
         {
             InitializeComponent();
         }

@@ -7,10 +7,16 @@ namespace CasaNacionalJudo.App
             InitializeComponent();
         }
 
-        private void memberBtn_Click(object sender, EventArgs e)
+        private void btnMember_Click(object sender, EventArgs e)
         {
-            MemberForm memberFrm = new();
+            BrowseMemberForm memberFrm = new();
             memberFrm.Show();
+        }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            AddMemberForm addMemberFrm = new();
+            addMemberFrm.Show();
         }
     }
 }
