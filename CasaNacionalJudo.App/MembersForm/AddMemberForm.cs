@@ -43,6 +43,7 @@ namespace CasaNacionalJudo.App
                 Phone = tbPhone.Text,
                 Email = tbEmail.Text,
                 Belt = tbBelt.Text,
+                SignUpDate = DateTime.Now.ToString("dd-MM-yyyy"),
                 MonthlyFee = tbMonthlyFee.Value,
                 AnualFee = tbAnualFee.Value
             };

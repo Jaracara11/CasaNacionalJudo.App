@@ -22,6 +22,7 @@ namespace CasaNacionalJudo.Core
         [DataType(DataType.EmailAddress)]
         public string Email { get; set; } = string.Empty;
         public string Belt { get; set; } = string.Empty;
+        public string SignUpDate { get; set; } = string.Empty;
         public decimal MonthlyFee { get; set; }
         public decimal AnualFee { get; set; }
         public decimal TotalAmountDue { get; set; }
