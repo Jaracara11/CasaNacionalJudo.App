@@ -25,16 +25,16 @@ namespace CasaNacionalJudo.Repository
 
             var parameters = new DynamicParameters();
             parameters.Add("firstName", member.FirstName, DbType.String);
-            parameters.Add("lastName", member.FirstName, DbType.String);
-            parameters.Add("birthDate", member.FirstName, DbType.DateTime);
-            parameters.Add("bloodType", member.FirstName, DbType.String);
-            parameters.Add("identification", member.FirstName, DbType.String);
-            parameters.Add("address", member.FirstName, DbType.String);
-            parameters.Add("phone", member.FirstName, DbType.String);
-            parameters.Add("email", member.FirstName, DbType.String);
-            parameters.Add("monthlyFee", member.FirstName, DbType.Decimal);
-            parameters.Add("anualFee", member.FirstName, DbType.Decimal);
-            parameters.Add("totalAmountDue", member.FirstName, DbType.Decimal);
+            parameters.Add("lastName", member.LastName, DbType.String);
+            parameters.Add("birthDate", member.BirthDate, DbType.DateTime);
+            parameters.Add("bloodType", member.BloodType, DbType.String);
+            parameters.Add("identification", member.Identification, DbType.String);
+            parameters.Add("address", member.Address, DbType.String);
+            parameters.Add("phone", member.Phone, DbType.String);
+            parameters.Add("email", member.Email, DbType.String);
+            parameters.Add("monthlyFee", member.MonthlyFee, DbType.Decimal);
+            parameters.Add("anualFee", member.AnualFee, DbType.Decimal);
+            parameters.Add("totalAmountDue", member.TotalAmountDue, DbType.Decimal);
 
             using var conn = new SqliteConnection(DbConnection.DbConn);
 
