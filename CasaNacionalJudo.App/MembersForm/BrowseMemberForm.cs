@@ -7,6 +7,7 @@ namespace CasaNacionalJudo.App
         public BrowseMemberForm()
         {
             InitializeComponent();
+            
         }
 
         private void MemberForm_Load(object sender, EventArgs e)
@@ -19,6 +20,8 @@ namespace CasaNacionalJudo.App
         {
             MemberRepository memberRepo = new();
             dgvMembers.DataSource = memberRepo.GetAllMembers();
+            dgvMembers.Columns["TutorId"].Visible = false;
+            dgvMembers.Columns["MemberId"].Visible = false;
         }
         #endregion
     }
