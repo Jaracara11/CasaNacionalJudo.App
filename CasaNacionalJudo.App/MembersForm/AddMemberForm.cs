@@ -1,12 +1,5 @@
-﻿using System;
-using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
-using System.Drawing;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-using System.Windows.Forms;
+﻿using CasaNacionalJudo.Core;
+using CasaNacionalJudo.Repository;
 
 namespace CasaNacionalJudo.App
 {
@@ -34,5 +27,45 @@ namespace CasaNacionalJudo.App
                     break;
             }
         }
+
+        private void btnSaveMember_Click(object sender, EventArgs e)
+        {
+            MemberRepository memberRepo = new();
+
+            Member member = new()
+            {
+                FirstName = tbFirstName.Text,
+                LastName = tbLastName.Text,
+                BirthDate = dtpBirthDate.Value,
+                BloodType = tbBloodType.Text,
+                Identification = tbIdentification.Text,
+                Address = tbAddress.Text,
+                Phone = tbPhone.Text,
+                Email = tbEmail.Text,
+                Belt = tbBelt.Text,
+                MonthlyFee = tbMonthlyFee.Value,
+                AnualFee = tbAnualFee.Value
+            };
+
+            memberRepo.AddMember(member);
+
+            ClearFields();
+        }
+
+        #region Utilities
+        private void ClearFields()
+        {
+            tbFirstName.Text = "";
+            tbLastName.Text = "";
+            tbBloodType.Text = "";
+            tbIdentification.Text = "";
+            tbAddress.Text = "";
+            tbPhone.Text = "";
+            tbEmail.Text = "";
+            tbBelt.Text = "";
+            tbMonthlyFee.Value = 0;
+            tbAnualFee.Value = 0;
+        }
+        #endregion
     }
 }

@@ -283,6 +283,7 @@
             this.btnSaveMember.TabIndex = 26;
             this.btnSaveMember.Text = "Save Member";
             this.btnSaveMember.UseVisualStyleBackColor = true;
+            this.btnSaveMember.Click += new System.EventHandler(this.btnSaveMember_Click);
             // 
             // panelTutor
             // 
