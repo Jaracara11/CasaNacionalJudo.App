@@ -36,7 +36,7 @@ namespace CasaNacionalJudo.App
             {
                 FirstName = tbFirstName.Text,
                 LastName = tbLastName.Text,
-                BirthDate = dtpBirthDate.Value,
+                BirthDate = dtpBirthDate.Text,
                 BloodType = tbBloodType.Text,
                 Identification = tbIdentification.Text,
                 Address = tbAddress.Text,

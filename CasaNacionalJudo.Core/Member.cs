@@ -11,8 +11,7 @@ namespace CasaNacionalJudo.Core
         [Required]
         public string LastName { get; set; } = string.Empty;
         [Required]
-        [DisplayFormat(DataFormatString = "dd/MM/yyyy")]
-        public DateTime BirthDate { get; set; }
+        public string BirthDate { get; set; } = string.Empty;
         public string BloodType { get; set; } = string.Empty;
         public string Identification { get; set; } = string.Empty;
         [Required]
