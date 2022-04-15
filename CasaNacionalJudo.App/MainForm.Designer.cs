@@ -29,39 +29,42 @@
         private void InitializeComponent()
         {
             this.btnMembers = new System.Windows.Forms.Button();
-            this.button1 = new System.Windows.Forms.Button();
+            this.btnAddMember = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // btnMembers
             // 
             this.btnMembers.Font = new System.Drawing.Font("Segoe UI Semibold", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.btnMembers.Location = new System.Drawing.Point(12, 12);
+            this.btnMembers.Location = new System.Drawing.Point(26, 30);
+            this.btnMembers.Margin = new System.Windows.Forms.Padding(6, 7, 6, 7);
             this.btnMembers.Name = "btnMembers";
-            this.btnMembers.Size = new System.Drawing.Size(240, 116);
+            this.btnMembers.Size = new System.Drawing.Size(514, 286);
             this.btnMembers.TabIndex = 0;
             this.btnMembers.Text = "Browse Members";
             this.btnMembers.UseVisualStyleBackColor = true;
             this.btnMembers.Click += new System.EventHandler(this.btnMember_Click);
             // 
-            // button1
+            // btnAddMember
             // 
-            this.button1.Font = new System.Drawing.Font("Segoe UI Semibold", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.button1.Location = new System.Drawing.Point(283, 12);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(240, 116);
-            this.button1.TabIndex = 1;
-            this.button1.Text = "Add Member";
-            this.button1.UseVisualStyleBackColor = true;
-            this.button1.Click += new System.EventHandler(this.button1_Click);
+            this.btnAddMember.Font = new System.Drawing.Font("Segoe UI Semibold", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.btnAddMember.Location = new System.Drawing.Point(606, 30);
+            this.btnAddMember.Margin = new System.Windows.Forms.Padding(6, 7, 6, 7);
+            this.btnAddMember.Name = "btnAddMember";
+            this.btnAddMember.Size = new System.Drawing.Size(514, 286);
+            this.btnAddMember.TabIndex = 1;
+            this.btnAddMember.Text = "Add Member";
+            this.btnAddMember.UseVisualStyleBackColor = true;
+            this.btnAddMember.Click += new System.EventHandler(this.btnAddMember_Click);
             // 
             // MainForm
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(15F, 37F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(875, 579);
-            this.Controls.Add(this.button1);
+            this.ClientSize = new System.Drawing.Size(1875, 1428);
+            this.Controls.Add(this.btnAddMember);
             this.Controls.Add(this.btnMembers);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
+            this.Margin = new System.Windows.Forms.Padding(6, 7, 6, 7);
             this.MaximizeBox = false;
             this.MinimizeBox = false;
             this.Name = "MainForm";
@@ -75,6 +78,6 @@
         #endregion
 
         private Button btnMembers;
-        private Button button1;
+        private Button btnAddMember;
     }
 }

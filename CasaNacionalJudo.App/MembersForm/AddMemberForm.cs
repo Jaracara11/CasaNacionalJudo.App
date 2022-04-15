@@ -10,6 +10,7 @@ namespace CasaNacionalJudo.App
             InitializeComponent();
         }
 
+        private readonly MemberRepository _memberRepo = new();
         private void AddMemberForm_Load(object sender, EventArgs e)
         {
             panelTutor.Visible = false;
@@ -30,8 +31,6 @@ namespace CasaNacionalJudo.App
 
         private void btnSaveMember_Click(object sender, EventArgs e)
         {
-            MemberRepository memberRepo = new();
-
             Member member = new()
             {
                 FirstName = tbFirstName.Text,
@@ -48,7 +47,7 @@ namespace CasaNacionalJudo.App
                 AnualFee = tbAnualFee.Value
             };
 
-            memberRepo.AddMember(member);
+            _memberRepo.AddMember(member);
 
             ClearFields();
         }
