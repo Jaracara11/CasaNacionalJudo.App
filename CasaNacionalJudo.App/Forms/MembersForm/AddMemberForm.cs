@@ -31,25 +31,39 @@ namespace CasaNacionalJudo.App
 
         private void btnSaveMember_Click(object sender, EventArgs e)
         {
-            Member member = new()
+            var alertTitle = "Add Member";
+            var newMemberName = $"{tbFirstName.Text} {tbLastName.Text}";
+
+            TextBox[] tBoxes = { tbFirstName, tbLastName, tbAddress, tbPhone };
+
+            if (FormHelper.ValidateTextboxes(tBoxes, " Field cannot be empty!", alertTitle) == true)
             {
-                FirstName = tbFirstName.Text,
-                LastName = tbLastName.Text,
-                BirthDate = dtpBirthDate.Text,
-                BloodType = tbBloodType.Text,
-                Identification = tbIdentification.Text,
-                Address = tbAddress.Text,
-                Phone = tbPhone.Text,
-                Email = tbEmail.Text,
-                Belt = tbBelt.Text,
-                SignUpDate = DateTime.Now.ToString("dd-MM-yyyy"),
-                MonthlyFee = tbMonthlyFee.Value,
-                AnualFee = tbAnualFee.Value
-            };
+                Member member = new()
+                {
+                    FirstName = tbFirstName.Text,
+                    LastName = tbLastName.Text,
+                    BirthDate = dtpBirthDate.Text,
+                    BloodType = tbBloodType.Text,
+                    Identification = tbIdentification.Text,
+                    Address = tbAddress.Text,
+                    Phone = tbPhone.Text,
+                    Email = tbEmail.Text,
+                    Belt = tbBelt.Text,
+                    SignUpDate = DateTime.Now.ToString("dd-MM-yyyy"),
+                    MonthlyFee = tbMonthlyFee.Value,
+                    AnualFee = tbAnualFee.Value
+                };
 
-            _memberRepo.AddMember(member);
+                if (FormHelper.ConfirmDialog($"Are you sure you want to add " +
+                    $"{newMemberName} as a new member?", alertTitle) == true)
+                {
+                    _memberRepo.AddMember(member);
 
-            ClearFields();
+                    FormHelper.SuccessDialog($"{newMemberName} has been added!", alertTitle);
+
+                    ClearFields();
+                }
+            }
         }
 
         #region Utilities
