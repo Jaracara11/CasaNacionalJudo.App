@@ -5,12 +5,13 @@ namespace CasaNacionalJudo.App
 {
     public partial class AddMemberForm : Form
     {
+        private readonly MemberRepository _memberRepo = new();
+        
         public AddMemberForm()
         {
             InitializeComponent();
         }
 
-        private readonly MemberRepository _memberRepo = new();
         private void AddMemberForm_Load(object sender, EventArgs e)
         {
             panelTutor.Visible = false;
