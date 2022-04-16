@@ -19,7 +19,6 @@ namespace CasaNacionalJudo.App
         {
             MemberRepository memberRepo = new();
             dgvMembers.DataSource = memberRepo.GetAllMembers();
-            dgvMembers.Columns["TutorId"].Visible = false;
             dgvMembers.Columns["MemberId"].Visible = false;
         }
         #endregion

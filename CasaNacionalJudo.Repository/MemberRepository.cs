@@ -20,8 +20,8 @@ namespace CasaNacionalJudo.Repository
 
         public void AddMember(Member member)
         {
-            var query = "INSERT INTO members (firstName, lastName, birthDate, bloodType, identification, address, phone, email, belt, signUpDate, monthlyFee, anualFee, totalAmountDue) " +
-                "VALUES (@firstName, @lastName, @birthDate, @bloodType, @identification, @address, @phone, @email, @belt, @signUpDate, @monthlyFee, @anualFee, @totalAmountDue)";
+            var query = "INSERT INTO members (firstName, lastName, birthDate, bloodType, identification, address, phone1, phone2, email, belt, signUpDate, monthlyFee, anualFee, totalAmountDue) " +
+                "VALUES (@firstName, @lastName, @birthDate, @bloodType, @identification, @address, @phone1, @phone2, @email, @belt, @signUpDate, @monthlyFee, @anualFee, @totalAmountDue)";
 
             var parameters = new DynamicParameters();
 
@@ -31,7 +31,8 @@ namespace CasaNacionalJudo.Repository
             parameters.Add("bloodType", member.BloodType, DbType.String);
             parameters.Add("identification", member.Identification, DbType.String);
             parameters.Add("address", member.Address, DbType.String);
-            parameters.Add("phone", member.Phone, DbType.String);
+            parameters.Add("phone1", member.Phone1, DbType.String);
+            parameters.Add("phone2", member.Phone2, DbType.String);
             parameters.Add("email", member.Email, DbType.String);
             parameters.Add("belt", member.Belt, DbType.String);
             parameters.Add("signUpDate", member.SignUpDate, DbType.Date);

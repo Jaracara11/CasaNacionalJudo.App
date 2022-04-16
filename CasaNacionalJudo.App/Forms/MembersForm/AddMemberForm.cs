@@ -15,31 +15,17 @@ namespace CasaNacionalJudo.App
 
         private void AddMemberForm_Load(object sender, EventArgs e)
         {
-            panelTutor.Visible = false;
-        }
-
-        private void cbTutor_Click(object sender, EventArgs e)
-        {
-            switch (cbTutor.CheckState)
-            {
-                case CheckState.Checked:
-                    panelTutor.Visible = true;
-                    break;
-                case CheckState.Unchecked:
-                    panelTutor.Visible = false;
-                    break;
-            }
         }
 
         private void btnSaveMember_Click(object sender, EventArgs e)
         {
             var alertTitle = "Add Member";
             var newMemberName = $"{tbFirstName.Text} {tbLastName.Text}";
-            TextBox[] tBoxes = { tbFirstName, tbLastName, tbAddress, tbPhone };
+            TextBox[] mandatoryTboxes = { tbFirstName, tbLastName, tbAddress, tbPhone1 };
 
             try
             {
-                if (FormHelper.ValidateTextboxes(tBoxes, " Field cannot be empty!", alertTitle) == true)
+                if (FormHelper.ValidateTextboxes(mandatoryTboxes, " Field cannot be empty!", alertTitle) == true)
                 {
                     Member member = new()
                     {
@@ -49,7 +35,8 @@ namespace CasaNacionalJudo.App
                         BloodType = tbBloodType.Text,
                         Identification = tbIdentification.Text,
                         Address = tbAddress.Text,
-                        Phone = tbPhone.Text,
+                        Phone1 = tbPhone1.Text,
+                        Phone2 = tbPhone2.Text,
                         Email = tbEmail.Text,
                         Belt = StringService.FirstCharToUpper(tbBelt.Text),
                         SignUpDate = DateTime.Now.ToString("dd-MM-yyyy"),
@@ -82,7 +69,8 @@ namespace CasaNacionalJudo.App
             tbBloodType.Text = "";
             tbIdentification.Text = "";
             tbAddress.Text = "";
-            tbPhone.Text = "";
+            tbPhone1.Text = "";
+            tbPhone2.Text = "";
             tbEmail.Text = "";
             tbBelt.Text = "";
             tbMonthlyFee.Value = 0;
