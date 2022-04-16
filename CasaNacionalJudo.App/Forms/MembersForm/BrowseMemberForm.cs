@@ -6,8 +6,7 @@ namespace CasaNacionalJudo.App
     {
         public BrowseMemberForm()
         {
-            InitializeComponent();
-            
+            InitializeComponent();      
         }
 
         private void MemberForm_Load(object sender, EventArgs e)
