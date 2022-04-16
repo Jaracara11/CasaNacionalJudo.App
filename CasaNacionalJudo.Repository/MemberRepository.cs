@@ -24,6 +24,7 @@ namespace CasaNacionalJudo.Repository
                 "VALUES (@firstName, @lastName, @birthDate, @bloodType, @identification, @address, @phone, @email, @belt, @signUpDate, @monthlyFee, @anualFee, @totalAmountDue)";
 
             var parameters = new DynamicParameters();
+
             parameters.Add("firstName", member.FirstName, DbType.String);
             parameters.Add("lastName", member.LastName, DbType.String);
             parameters.Add("birthDate", member.BirthDate, DbType.String);
