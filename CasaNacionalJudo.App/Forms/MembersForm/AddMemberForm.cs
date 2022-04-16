@@ -1,5 +1,6 @@
 ﻿using CasaNacionalJudo.Core;
 using CasaNacionalJudo.Repository;
+using CasaNacionalJudo.Service;
 
 namespace CasaNacionalJudo.App
 {
@@ -41,15 +42,15 @@ namespace CasaNacionalJudo.App
             {
                 Member member = new()
                 {
-                    FirstName = tbFirstName.Text,
-                    LastName = tbLastName.Text,
+                    FirstName = StringService.FirstCharToUpper(tbFirstName.Text),
+                    LastName = StringService.FirstCharToUpper(tbLastName.Text),
                     BirthDate = dtpBirthDate.Text,
                     BloodType = tbBloodType.Text,
                     Identification = tbIdentification.Text,
                     Address = tbAddress.Text,
                     Phone = tbPhone.Text,
                     Email = tbEmail.Text,
-                    Belt = tbBelt.Text,
+                    Belt = StringService.FirstCharToUpper(tbBelt.Text),
                     SignUpDate = DateTime.Now.ToString("dd-MM-yyyy"),
                     MonthlyFee = tbMonthlyFee.Value,
                     AnualFee = tbAnualFee.Value

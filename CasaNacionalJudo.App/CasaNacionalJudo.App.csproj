@@ -10,6 +10,7 @@
 
   <ItemGroup>
     <ProjectReference Include="..\CasaNacionalJudo.Repository\CasaNacionalJudo.Repository.csproj" />
+    <ProjectReference Include="..\CasaNacionalJudo.Service\CasaNacionalJudo.Service.csproj" />
   </ItemGroup>
 
 </Project>
