@@ -7,7 +7,7 @@ namespace CasaNacionalJudo.App
     public partial class AddMemberForm : Form
     {
         private readonly MemberRepository _memberRepo = new();
-        
+
         public AddMemberForm()
         {
             InitializeComponent();
@@ -35,36 +35,42 @@ namespace CasaNacionalJudo.App
         {
             var alertTitle = "Add Member";
             var newMemberName = $"{tbFirstName.Text} {tbLastName.Text}";
-
             TextBox[] tBoxes = { tbFirstName, tbLastName, tbAddress, tbPhone };
 
-            if (FormHelper.ValidateTextboxes(tBoxes, " Field cannot be empty!", alertTitle) == true)
+            try
             {
-                Member member = new()
+                if (FormHelper.ValidateTextboxes(tBoxes, " Field cannot be empty!", alertTitle) == true)
                 {
-                    FirstName = StringService.FirstCharToUpper(tbFirstName.Text),
-                    LastName = StringService.FirstCharToUpper(tbLastName.Text),
-                    BirthDate = dtpBirthDate.Text,
-                    BloodType = tbBloodType.Text,
-                    Identification = tbIdentification.Text,
-                    Address = tbAddress.Text,
-                    Phone = tbPhone.Text,
-                    Email = tbEmail.Text,
-                    Belt = StringService.FirstCharToUpper(tbBelt.Text),
-                    SignUpDate = DateTime.Now.ToString("dd-MM-yyyy"),
-                    MonthlyFee = tbMonthlyFee.Value,
-                    AnualFee = tbAnualFee.Value
-                };
+                    Member member = new()
+                    {
+                        FirstName = StringService.FirstCharToUpper(tbFirstName.Text),
+                        LastName = StringService.FirstCharToUpper(tbLastName.Text),
+                        BirthDate = dtpBirthDate.Text,
+                        BloodType = tbBloodType.Text,
+                        Identification = tbIdentification.Text,
+                        Address = tbAddress.Text,
+                        Phone = tbPhone.Text,
+                        Email = tbEmail.Text,
+                        Belt = StringService.FirstCharToUpper(tbBelt.Text),
+                        SignUpDate = DateTime.Now.ToString("dd-MM-yyyy"),
+                        MonthlyFee = tbMonthlyFee.Value,
+                        AnualFee = tbAnualFee.Value
+                    };
 
-                if (FormHelper.ConfirmDialog($"Are you sure you want to add " +
-                    $"{newMemberName} as a new member?", alertTitle) == true)
-                {
-                    _memberRepo.AddMember(member);
+                    if (FormHelper.ConfirmDialog($"Are you sure you want to add " +
+                        $"{newMemberName} as a new member?", alertTitle) == true)
+                    {
+                        _memberRepo.AddMember(member);
 
-                    FormHelper.SuccessDialog($"{newMemberName} has been added!", alertTitle);
+                        FormHelper.SuccessDialog($"{newMemberName} has been added!", alertTitle);
 
-                    ClearFields();
+                        ClearFields();
+                    }
                 }
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message);
             }
         }
 
