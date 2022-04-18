@@ -60,50 +60,45 @@
             // tbFirstName
             // 
             this.tbFirstName.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.tbFirstName.Location = new System.Drawing.Point(28, 67);
-            this.tbFirstName.Margin = new System.Windows.Forms.Padding(6, 7, 6, 7);
+            this.tbFirstName.Location = new System.Drawing.Point(11, 27);
             this.tbFirstName.MaxLength = 50;
             this.tbFirstName.Name = "tbFirstName";
-            this.tbFirstName.Size = new System.Drawing.Size(490, 46);
+            this.tbFirstName.Size = new System.Drawing.Size(231, 25);
             this.tbFirstName.TabIndex = 0;
             // 
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(26, 22);
-            this.label1.Margin = new System.Windows.Forms.Padding(6, 0, 6, 0);
+            this.label1.Location = new System.Drawing.Point(11, 9);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(144, 37);
+            this.label1.Size = new System.Drawing.Size(64, 15);
             this.label1.TabIndex = 1;
             this.label1.Text = "First Name";
             // 
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(667, 23);
-            this.label2.Margin = new System.Windows.Forms.Padding(6, 0, 6, 0);
+            this.label2.Location = new System.Drawing.Point(309, 9);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(142, 37);
+            this.label2.Size = new System.Drawing.Size(63, 15);
             this.label2.TabIndex = 3;
             this.label2.Text = "Last Name";
             // 
             // tbLastName
             // 
             this.tbLastName.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.tbLastName.Location = new System.Drawing.Point(667, 67);
-            this.tbLastName.Margin = new System.Windows.Forms.Padding(6, 7, 6, 7);
+            this.tbLastName.Location = new System.Drawing.Point(309, 27);
             this.tbLastName.MaxLength = 50;
             this.tbLastName.Name = "tbLastName";
-            this.tbLastName.Size = new System.Drawing.Size(490, 46);
+            this.tbLastName.Size = new System.Drawing.Size(231, 25);
             this.tbLastName.TabIndex = 2;
             // 
             // label3
             // 
             this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(26, 162);
-            this.label3.Margin = new System.Windows.Forms.Padding(6, 0, 6, 0);
+            this.label3.Location = new System.Drawing.Point(11, 66);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(135, 37);
+            this.label3.Size = new System.Drawing.Size(59, 15);
             this.label3.TabIndex = 4;
             this.label3.Text = "Birth Date";
             // 
@@ -112,21 +107,19 @@
             this.dtpBirthDate.CustomFormat = "dd-MM-yyyy";
             this.dtpBirthDate.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.dtpBirthDate.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
-            this.dtpBirthDate.Location = new System.Drawing.Point(24, 207);
-            this.dtpBirthDate.Margin = new System.Windows.Forms.Padding(6, 7, 6, 7);
+            this.dtpBirthDate.Location = new System.Drawing.Point(11, 84);
             this.dtpBirthDate.Name = "dtpBirthDate";
             this.dtpBirthDate.RightToLeft = System.Windows.Forms.RightToLeft.No;
-            this.dtpBirthDate.Size = new System.Drawing.Size(490, 46);
+            this.dtpBirthDate.Size = new System.Drawing.Size(231, 25);
             this.dtpBirthDate.TabIndex = 5;
             this.dtpBirthDate.Value = new System.DateTime(2022, 4, 7, 10, 43, 7, 0);
             // 
             // label4
             // 
             this.label4.AutoSize = true;
-            this.label4.Location = new System.Drawing.Point(667, 162);
-            this.label4.Margin = new System.Windows.Forms.Padding(6, 0, 6, 0);
+            this.label4.Location = new System.Drawing.Point(309, 66);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(150, 37);
+            this.label4.Size = new System.Drawing.Size(65, 15);
             this.label4.TabIndex = 6;
             this.label4.Text = "Blood Type";
             // 
@@ -134,168 +127,152 @@
             // 
             this.tbBloodType.CharacterCasing = System.Windows.Forms.CharacterCasing.Upper;
             this.tbBloodType.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.tbBloodType.Location = new System.Drawing.Point(667, 206);
-            this.tbBloodType.Margin = new System.Windows.Forms.Padding(6, 7, 6, 7);
+            this.tbBloodType.Location = new System.Drawing.Point(309, 84);
             this.tbBloodType.MaxLength = 10;
             this.tbBloodType.Name = "tbBloodType";
-            this.tbBloodType.Size = new System.Drawing.Size(488, 46);
+            this.tbBloodType.Size = new System.Drawing.Size(230, 25);
             this.tbBloodType.TabIndex = 7;
             // 
             // tbIdentification
             // 
             this.tbIdentification.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.tbIdentification.Location = new System.Drawing.Point(26, 354);
-            this.tbIdentification.Margin = new System.Windows.Forms.Padding(6, 7, 6, 7);
+            this.tbIdentification.Location = new System.Drawing.Point(11, 144);
             this.tbIdentification.MaxLength = 11;
             this.tbIdentification.Name = "tbIdentification";
-            this.tbIdentification.Size = new System.Drawing.Size(488, 46);
+            this.tbIdentification.Size = new System.Drawing.Size(230, 25);
             this.tbIdentification.TabIndex = 9;
             // 
             // label5
             // 
             this.label5.AutoSize = true;
-            this.label5.Location = new System.Drawing.Point(24, 310);
-            this.label5.Margin = new System.Windows.Forms.Padding(6, 0, 6, 0);
+            this.label5.Location = new System.Drawing.Point(11, 126);
             this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(173, 37);
+            this.label5.Size = new System.Drawing.Size(77, 15);
             this.label5.TabIndex = 8;
             this.label5.Text = "Identification";
             // 
             // tbAddress
             // 
             this.tbAddress.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.tbAddress.Location = new System.Drawing.Point(667, 354);
-            this.tbAddress.Margin = new System.Windows.Forms.Padding(6, 7, 6, 7);
+            this.tbAddress.Location = new System.Drawing.Point(309, 144);
             this.tbAddress.MaxLength = 100;
             this.tbAddress.Name = "tbAddress";
-            this.tbAddress.Size = new System.Drawing.Size(488, 46);
+            this.tbAddress.Size = new System.Drawing.Size(230, 25);
             this.tbAddress.TabIndex = 11;
             // 
             // label6
             // 
             this.label6.AutoSize = true;
-            this.label6.Location = new System.Drawing.Point(667, 310);
-            this.label6.Margin = new System.Windows.Forms.Padding(6, 0, 6, 0);
+            this.label6.Location = new System.Drawing.Point(309, 126);
             this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(111, 37);
+            this.label6.Size = new System.Drawing.Size(49, 15);
             this.label6.TabIndex = 10;
             this.label6.Text = "Address";
             // 
             // tbPhone1
             // 
             this.tbPhone1.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.tbPhone1.Location = new System.Drawing.Point(26, 508);
-            this.tbPhone1.Margin = new System.Windows.Forms.Padding(6, 7, 6, 7);
+            this.tbPhone1.Location = new System.Drawing.Point(12, 206);
             this.tbPhone1.MaxLength = 10;
             this.tbPhone1.Name = "tbPhone1";
-            this.tbPhone1.Size = new System.Drawing.Size(490, 46);
+            this.tbPhone1.Size = new System.Drawing.Size(231, 25);
             this.tbPhone1.TabIndex = 13;
             // 
             // label7
             // 
             this.label7.AutoSize = true;
-            this.label7.Location = new System.Drawing.Point(26, 463);
-            this.label7.Margin = new System.Windows.Forms.Padding(6, 0, 6, 0);
+            this.label7.Location = new System.Drawing.Point(11, 188);
             this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(114, 37);
+            this.label7.Size = new System.Drawing.Size(50, 15);
             this.label7.TabIndex = 12;
             this.label7.Text = "Phone 1";
             // 
             // tbEmail
             // 
             this.tbEmail.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.tbEmail.Location = new System.Drawing.Point(28, 663);
-            this.tbEmail.Margin = new System.Windows.Forms.Padding(6, 7, 6, 7);
+            this.tbEmail.Location = new System.Drawing.Point(11, 269);
             this.tbEmail.MaxLength = 50;
             this.tbEmail.Name = "tbEmail";
-            this.tbEmail.Size = new System.Drawing.Size(488, 46);
+            this.tbEmail.Size = new System.Drawing.Size(230, 25);
             this.tbEmail.TabIndex = 15;
             // 
             // label8
             // 
             this.label8.AutoSize = true;
-            this.label8.Location = new System.Drawing.Point(28, 618);
-            this.label8.Margin = new System.Windows.Forms.Padding(6, 0, 6, 0);
+            this.label8.Location = new System.Drawing.Point(11, 251);
             this.label8.Name = "label8";
-            this.label8.Size = new System.Drawing.Size(82, 37);
+            this.label8.Size = new System.Drawing.Size(36, 15);
             this.label8.TabIndex = 14;
             this.label8.Text = "Email";
             // 
             // tbBelt
             // 
             this.tbBelt.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.tbBelt.Location = new System.Drawing.Point(667, 662);
-            this.tbBelt.Margin = new System.Windows.Forms.Padding(6, 7, 6, 7);
+            this.tbBelt.Location = new System.Drawing.Point(309, 269);
             this.tbBelt.MaxLength = 20;
             this.tbBelt.Name = "tbBelt";
-            this.tbBelt.Size = new System.Drawing.Size(488, 46);
+            this.tbBelt.Size = new System.Drawing.Size(230, 25);
             this.tbBelt.TabIndex = 17;
             // 
             // label9
             // 
             this.label9.AutoSize = true;
-            this.label9.Location = new System.Drawing.Point(667, 618);
-            this.label9.Margin = new System.Windows.Forms.Padding(6, 0, 6, 0);
+            this.label9.Location = new System.Drawing.Point(309, 251);
             this.label9.Name = "label9";
-            this.label9.Size = new System.Drawing.Size(62, 37);
+            this.label9.Size = new System.Drawing.Size(27, 15);
             this.label9.TabIndex = 16;
             this.label9.Text = "Belt";
             // 
             // tbMonthlyFee
             // 
             this.tbMonthlyFee.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.tbMonthlyFee.Location = new System.Drawing.Point(24, 826);
-            this.tbMonthlyFee.Margin = new System.Windows.Forms.Padding(6, 7, 6, 7);
+            this.tbMonthlyFee.Location = new System.Drawing.Point(11, 335);
             this.tbMonthlyFee.Maximum = new decimal(new int[] {
             9999,
             0,
             0,
             0});
             this.tbMonthlyFee.Name = "tbMonthlyFee";
-            this.tbMonthlyFee.Size = new System.Drawing.Size(341, 46);
+            this.tbMonthlyFee.Size = new System.Drawing.Size(159, 25);
             this.tbMonthlyFee.TabIndex = 22;
             // 
             // label10
             // 
             this.label10.AutoSize = true;
-            this.label10.Location = new System.Drawing.Point(33, 782);
-            this.label10.Margin = new System.Windows.Forms.Padding(6, 0, 6, 0);
+            this.label10.Location = new System.Drawing.Point(11, 317);
             this.label10.Name = "label10";
-            this.label10.Size = new System.Drawing.Size(164, 37);
+            this.label10.Size = new System.Drawing.Size(73, 15);
             this.label10.TabIndex = 23;
             this.label10.Text = "Monthly Fee";
             // 
             // label11
             // 
             this.label11.AutoSize = true;
-            this.label11.Location = new System.Drawing.Point(667, 782);
-            this.label11.Margin = new System.Windows.Forms.Padding(6, 0, 6, 0);
+            this.label11.Location = new System.Drawing.Point(309, 317);
             this.label11.Name = "label11";
-            this.label11.Size = new System.Drawing.Size(133, 37);
+            this.label11.Size = new System.Drawing.Size(59, 15);
             this.label11.TabIndex = 25;
             this.label11.Text = "Anual Fee";
             // 
             // tbAnualFee
             // 
             this.tbAnualFee.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.tbAnualFee.Location = new System.Drawing.Point(665, 826);
-            this.tbAnualFee.Margin = new System.Windows.Forms.Padding(6, 7, 6, 7);
+            this.tbAnualFee.Location = new System.Drawing.Point(309, 335);
             this.tbAnualFee.Maximum = new decimal(new int[] {
             9999,
             0,
             0,
             0});
             this.tbAnualFee.Name = "tbAnualFee";
-            this.tbAnualFee.Size = new System.Drawing.Size(341, 46);
+            this.tbAnualFee.Size = new System.Drawing.Size(159, 25);
             this.tbAnualFee.TabIndex = 24;
             // 
             // btnSaveMember
             // 
             this.btnSaveMember.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.btnSaveMember.Location = new System.Drawing.Point(24, 945);
-            this.btnSaveMember.Margin = new System.Windows.Forms.Padding(6, 7, 6, 7);
+            this.btnSaveMember.Location = new System.Drawing.Point(11, 383);
             this.btnSaveMember.Name = "btnSaveMember";
-            this.btnSaveMember.Size = new System.Drawing.Size(341, 178);
+            this.btnSaveMember.Size = new System.Drawing.Size(159, 72);
             this.btnSaveMember.TabIndex = 26;
             this.btnSaveMember.Text = "Save Member";
             this.btnSaveMember.UseVisualStyleBackColor = true;
@@ -304,28 +281,26 @@
             // tbPhone2
             // 
             this.tbPhone2.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.tbPhone2.Location = new System.Drawing.Point(667, 508);
-            this.tbPhone2.Margin = new System.Windows.Forms.Padding(6, 7, 6, 7);
+            this.tbPhone2.Location = new System.Drawing.Point(309, 206);
             this.tbPhone2.MaxLength = 10;
             this.tbPhone2.Name = "tbPhone2";
-            this.tbPhone2.Size = new System.Drawing.Size(490, 46);
+            this.tbPhone2.Size = new System.Drawing.Size(231, 25);
             this.tbPhone2.TabIndex = 28;
             // 
             // label12
             // 
             this.label12.AutoSize = true;
-            this.label12.Location = new System.Drawing.Point(667, 463);
-            this.label12.Margin = new System.Windows.Forms.Padding(6, 0, 6, 0);
+            this.label12.Location = new System.Drawing.Point(309, 188);
             this.label12.Name = "label12";
-            this.label12.Size = new System.Drawing.Size(114, 37);
+            this.label12.Size = new System.Drawing.Size(50, 15);
             this.label12.TabIndex = 27;
             this.label12.Text = "Phone 2";
             // 
             // AddMemberForm
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(15F, 37F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1189, 1156);
+            this.ClientSize = new System.Drawing.Size(553, 466);
             this.Controls.Add(this.tbPhone2);
             this.Controls.Add(this.label12);
             this.Controls.Add(this.btnSaveMember);
@@ -352,7 +327,6 @@
             this.Controls.Add(this.label1);
             this.Controls.Add(this.tbFirstName);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
-            this.Margin = new System.Windows.Forms.Padding(6, 7, 6, 7);
             this.MaximizeBox = false;
             this.MinimizeBox = false;
             this.Name = "AddMemberForm";
