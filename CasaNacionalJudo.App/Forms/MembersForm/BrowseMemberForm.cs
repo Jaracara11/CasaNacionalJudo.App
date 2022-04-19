@@ -22,7 +22,7 @@ namespace CasaNacionalJudo.App
 
             var rowIndex = e.RowIndex;
 
-            if (FormHelper.ConfirmDialog("Want to display user?", "More info on user") == true)
+            if (FormHelper.ConfirmDialog("Want to display this user's information?", "More info on user") == true)
             {
                 Member member = new()
                 {
