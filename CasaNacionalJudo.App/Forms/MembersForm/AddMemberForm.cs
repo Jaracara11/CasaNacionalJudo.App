@@ -43,7 +43,7 @@ namespace CasaNacionalJudo.App
                     {
                         MemberRepository.AddMember(member);
 
-                        FormHelper.SuccessDialog($"{newMemberName} has been added!", alertTitle);
+                        FormHelper.InfoDialog($"{newMemberName} has been added!", alertTitle);
 
                         ClearFields();
                     }

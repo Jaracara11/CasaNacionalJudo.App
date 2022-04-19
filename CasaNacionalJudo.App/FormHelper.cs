@@ -34,7 +34,7 @@
             return result;
         }
 
-        public static void SuccessDialog(string dialogText, string alertTitle)
+        public static void InfoDialog(string dialogText, string alertTitle)
         {
             MessageBox.Show(dialogText, alertTitle,
                            MessageBoxButtons.OK, MessageBoxIcon.Information);

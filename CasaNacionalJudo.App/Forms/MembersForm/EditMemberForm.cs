@@ -48,7 +48,7 @@ namespace CasaNacionalJudo.App.Forms.MembersForm
                     {
                         MemberRepository.UpdateMember(member);
 
-                        FormHelper.SuccessDialog($"{memberName}'s information has been updated!", alertTitle);
+                        FormHelper.InfoDialog($"{memberName}'s information has been updated!", alertTitle);
 
                         Close();
                         BrowseMemberForm browseMemberFrm = new();

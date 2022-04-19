@@ -48,6 +48,12 @@ namespace CasaNacionalJudo.App
         private void btnSearch_Click(object sender, EventArgs e)
         {
             dgvMembers.DataSource = MemberRepository.GetMemberByName(tbSearchByName.Text);
+            
+            if (dgvMembers.RowCount == 0)
+            {
+                FormHelper.InfoDialog($"{tbSearchByName.Text} Not Found!", "Search Member");
+                LoadMembers();
+            }
         }
 
         private void btnReloadData_Click(object sender, EventArgs e)
