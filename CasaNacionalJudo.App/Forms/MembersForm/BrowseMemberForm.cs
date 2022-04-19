@@ -9,10 +9,6 @@ namespace CasaNacionalJudo.App
         public BrowseMemberForm()
         {
             InitializeComponent();
-        }
-
-        private void MemberForm_Load(object sender, EventArgs e)
-        {
             LoadMembers();
         }
 
@@ -47,6 +43,17 @@ namespace CasaNacionalJudo.App
                 editMemberFrm.Show();
                 Close();
             }
+        }
+
+        private void btnSearch_Click(object sender, EventArgs e)
+        {
+            dgvMembers.DataSource = MemberRepository.GetMemberByName(tbSearchByName.Text);
+        }
+
+        private void btnReloadData_Click(object sender, EventArgs e)
+        {
+            LoadMembers();
+            tbSearchByName.Text = "";
         }
 
         #region Utilities

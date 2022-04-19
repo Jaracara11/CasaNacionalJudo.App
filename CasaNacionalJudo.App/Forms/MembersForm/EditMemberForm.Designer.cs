@@ -385,7 +385,6 @@
             this.ShowIcon = false;
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "EditMemberForm";
-            this.Load += new System.EventHandler(this.EditMemberForm_Load);
             ((System.ComponentModel.ISupportInitialize)(this.tbMonthlyFee)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.tbAnualFee)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.tbTotalAmountDue)).EndInit();

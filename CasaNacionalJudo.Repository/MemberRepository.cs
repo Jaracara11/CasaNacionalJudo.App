@@ -15,13 +15,13 @@ namespace CasaNacionalJudo.Repository
 
             var result = conn.Query<Member>(query);
 
-            return result.ToList();
+            return result;
         }
 
         public static void AddMember(Member member)
         {
-            var query = "INSERT INTO members (firstName, lastName, birthDate, bloodType, identification, address, phone1, phone2, email, belt, signUpDate, monthlyFee, anualFee, totalAmountDue) " +
-                "VALUES (@firstName, @lastName, @birthDate, @bloodType, @identification, @address, @phone1, @phone2, @email, @belt, @signUpDate, @monthlyFee, @anualFee, @totalAmountDue)";
+            var query = "INSERT INTO members (firstName, lastName, birthDate, bloodType, identification, address, phone1, phone2, email, belt, signUpDate, monthlyFee, anualFee) " +
+                "VALUES (@firstName, @lastName, @birthDate, @bloodType, @identification, @address, @phone1, @phone2, @email, @belt, @signUpDate, @monthlyFee, @anualFee)";
 
             var parameters = new DynamicParameters();
 
@@ -38,7 +38,6 @@ namespace CasaNacionalJudo.Repository
             parameters.Add("signUpDate", member.SignUpDate, DbType.Date);
             parameters.Add("monthlyFee", member.MonthlyFee, DbType.Decimal);
             parameters.Add("anualFee", member.AnualFee, DbType.Decimal);
-            parameters.Add("totalAmountDue", member.TotalAmountDue, DbType.Decimal);
 
             using var conn = new SqliteConnection(DbConnection.DbConn);
 
@@ -69,6 +68,17 @@ namespace CasaNacionalJudo.Repository
             using var conn = new SqliteConnection(DbConnection.DbConn);
 
             conn.Execute(query, parameters);
+        }
+
+        public static IEnumerable<Member> GetMemberByName(string memberName)
+        {
+            var query = $"SELECT * FROM members WHERE firstName LIKE '%{memberName}%'";
+
+            using var conn = new SqliteConnection(DbConnection.DbConn);
+
+            var result = conn.Query<Member>(query);
+
+            return result;
         }
 
     }

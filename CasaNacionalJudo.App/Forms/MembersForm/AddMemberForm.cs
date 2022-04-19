@@ -11,10 +11,6 @@ namespace CasaNacionalJudo.App
             InitializeComponent();
         }
 
-        private void AddMemberForm_Load(object sender, EventArgs e)
-        {
-        }
-
         private void btnSaveMember_Click(object sender, EventArgs e)
         {
             var alertTitle = "Add Member";

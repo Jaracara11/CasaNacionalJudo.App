@@ -1,6 +1,7 @@
 ﻿using CasaNacionalJudo.Core;
 using CasaNacionalJudo.Repository;
 using CasaNacionalJudo.Service;
+using System.Globalization;
 
 namespace CasaNacionalJudo.App.Forms.MembersForm
 {
@@ -13,11 +14,6 @@ namespace CasaNacionalJudo.App.Forms.MembersForm
             _member = member;
             InitializeComponent();
             LoadMemberData();
-        }
-
-        private void EditMemberForm_Load(object sender, EventArgs e)
-        {
-
         }
 
         private void btnUpdateMember_Click(object sender, EventArgs e)
@@ -71,7 +67,7 @@ namespace CasaNacionalJudo.App.Forms.MembersForm
         {
             tbFirstName.Text = _member.FirstName;
             tbLastName.Text = _member.LastName;
-            dtpBirthDate.Value = DateTime.Parse(_member.BirthDate);
+            dtpBirthDate.Value = StringService.ConvertToDateTime(_member.BirthDate);
             tbBloodType.Text = _member.BloodType;
             tbIdentification.Text = _member.Identification;
             tbAddress.Text = _member.Address;

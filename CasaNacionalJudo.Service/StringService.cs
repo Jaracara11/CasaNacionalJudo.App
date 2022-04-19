@@ -14,5 +14,23 @@
 
             return input;
         }
+
+        public static DateTime ConvertToDateTime(string str)
+        {
+            DateTime finaldate; string sDateTime;
+
+            try
+            {
+                finaldate = Convert.ToDateTime(str);
+            }
+            catch (Exception)
+            {
+                string[] sDate = str.Split('-');
+                sDateTime = sDate[1] + '-' + sDate[0] + '-' + sDate[2];
+                finaldate = Convert.ToDateTime(sDateTime);
+            }
+
+            return finaldate;
+        }
     }
 }

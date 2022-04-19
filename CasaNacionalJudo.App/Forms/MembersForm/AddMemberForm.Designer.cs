@@ -334,7 +334,6 @@
             this.ShowIcon = false;
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "AddMemberForm";
-            this.Load += new System.EventHandler(this.AddMemberForm_Load);
             ((System.ComponentModel.ISupportInitialize)(this.tbMonthlyFee)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.tbAnualFee)).EndInit();
             this.ResumeLayout(false);
