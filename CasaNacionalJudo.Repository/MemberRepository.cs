@@ -18,6 +18,17 @@ namespace CasaNacionalJudo.Repository
             return result;
         }
 
+        public static IEnumerable<Member> GetMemberByName(string memberName)
+        {
+            var query = $"SELECT * FROM members WHERE firstName LIKE '%{memberName}%'";
+
+            using var conn = new SqliteConnection(DbConnection.DbConn);
+
+            var result = conn.Query<Member>(query);
+
+            return result;
+        }
+
         public static void AddMember(Member member)
         {
             var query = "INSERT INTO members (firstName, lastName, birthDate, bloodType, identification, address, phone1, phone2, email, belt, signUpDate, monthlyFee, anualFee) " +
@@ -68,17 +79,6 @@ namespace CasaNacionalJudo.Repository
             using var conn = new SqliteConnection(DbConnection.DbConn);
 
             conn.Execute(query, parameters);
-        }
-
-        public static IEnumerable<Member> GetMemberByName(string memberName)
-        {
-            var query = $"SELECT * FROM members WHERE firstName LIKE '%{memberName}%'";
-
-            using var conn = new SqliteConnection(DbConnection.DbConn);
-
-            var result = conn.Query<Member>(query);
-
-            return result;
         }
     }
 }
