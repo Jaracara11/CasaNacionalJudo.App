@@ -80,6 +80,5 @@ namespace CasaNacionalJudo.Repository
 
             return result;
         }
-
     }
 }
