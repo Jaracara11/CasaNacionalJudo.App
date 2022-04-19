@@ -6,8 +6,6 @@ namespace CasaNacionalJudo.App
 {
     public partial class AddMemberForm : Form
     {
-        private readonly MemberRepository _memberRepo = new();
-
         public AddMemberForm()
         {
             InitializeComponent();
@@ -47,7 +45,7 @@ namespace CasaNacionalJudo.App
                     if (FormHelper.ConfirmDialog($"Are you sure you want to add " +
                         $"{newMemberName} as a new member?", alertTitle) == true)
                     {
-                        _memberRepo.AddMember(member);
+                        MemberRepository.AddMember(member);
 
                         FormHelper.SuccessDialog($"{newMemberName} has been added!", alertTitle);
 

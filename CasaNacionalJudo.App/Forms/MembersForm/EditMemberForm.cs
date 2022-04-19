@@ -1,4 +1,6 @@
 ﻿using CasaNacionalJudo.Core;
+using CasaNacionalJudo.Repository;
+using CasaNacionalJudo.Service;
 
 namespace CasaNacionalJudo.App.Forms.MembersForm
 {
@@ -16,6 +18,52 @@ namespace CasaNacionalJudo.App.Forms.MembersForm
         private void EditMemberForm_Load(object sender, EventArgs e)
         {
 
+        }
+
+        private void btnUpdateMember_Click(object sender, EventArgs e)
+        {
+            var alertTitle = "Edit Member";
+            var memberName = $"{_member.FirstName} {_member.LastName}";
+            TextBox[] mandatoryTboxes = { tbFirstName, tbLastName, tbAddress, tbPhone1 };
+
+            try
+            {
+                if (FormHelper.ValidateTextboxes(mandatoryTboxes, " Field cannot be empty!", alertTitle) == true)
+                {
+                    Member member = new()
+                    {
+                        MemberId = _member.MemberId,
+                        FirstName = StringService.FirstCharToUpper(tbFirstName.Text),
+                        LastName = StringService.FirstCharToUpper(tbLastName.Text),
+                        BirthDate = dtpBirthDate.Text,
+                        BloodType = tbBloodType.Text,
+                        Identification = tbIdentification.Text,
+                        Address = tbAddress.Text,
+                        Phone1 = tbPhone1.Text,
+                        Phone2 = tbPhone2.Text,
+                        Email = tbEmail.Text,
+                        Belt = StringService.FirstCharToUpper(tbBelt.Text),
+                        MonthlyFee = tbMonthlyFee.Value,
+                        AnualFee = tbAnualFee.Value
+                    };
+
+                    if (FormHelper.ConfirmDialog($"Are you sure you want to update " +
+                        $"{memberName}'s information?", alertTitle) == true)
+                    {
+                        MemberRepository.UpdateMember(member);
+
+                        FormHelper.SuccessDialog($"{memberName}'s information has been updated!", alertTitle);
+
+                        Close();
+                        BrowseMemberForm browseMemberFrm = new();
+                        browseMemberFrm.Show();
+                    }
+                }
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message);
+            }
         }
 
         #region Utilities

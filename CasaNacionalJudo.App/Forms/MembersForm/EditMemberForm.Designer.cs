@@ -281,6 +281,7 @@
             this.btnUpdateMember.TabIndex = 26;
             this.btnUpdateMember.Text = "Update Member";
             this.btnUpdateMember.UseVisualStyleBackColor = true;
+            this.btnUpdateMember.Click += new System.EventHandler(this.btnUpdateMember_Click);
             // 
             // tbPhone2
             // 

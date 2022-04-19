@@ -45,14 +45,14 @@ namespace CasaNacionalJudo.App
 
                 EditMemberForm editMemberFrm = new(member);
                 editMemberFrm.Show();
+                Close();
             }
         }
 
         #region Utilities
         private void LoadMembers()
         {
-            MemberRepository memberRepo = new();
-            dgvMembers.DataSource = memberRepo.GetAllMembers();
+            dgvMembers.DataSource = MemberRepository.GetAllMembers();
             dgvMembers.Columns["MemberId"].Visible = false;
         }
         #endregion
