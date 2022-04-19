@@ -35,10 +35,9 @@
             // btnMembers
             // 
             this.btnMembers.Font = new System.Drawing.Font("Segoe UI Semibold", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.btnMembers.Location = new System.Drawing.Point(26, 30);
-            this.btnMembers.Margin = new System.Windows.Forms.Padding(6, 7, 6, 7);
+            this.btnMembers.Location = new System.Drawing.Point(12, 12);
             this.btnMembers.Name = "btnMembers";
-            this.btnMembers.Size = new System.Drawing.Size(514, 286);
+            this.btnMembers.Size = new System.Drawing.Size(240, 116);
             this.btnMembers.TabIndex = 0;
             this.btnMembers.Text = "Browse Members";
             this.btnMembers.UseVisualStyleBackColor = true;
@@ -47,10 +46,9 @@
             // btnAddMember
             // 
             this.btnAddMember.Font = new System.Drawing.Font("Segoe UI Semibold", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.btnAddMember.Location = new System.Drawing.Point(606, 30);
-            this.btnAddMember.Margin = new System.Windows.Forms.Padding(6, 7, 6, 7);
+            this.btnAddMember.Location = new System.Drawing.Point(562, 12);
             this.btnAddMember.Name = "btnAddMember";
-            this.btnAddMember.Size = new System.Drawing.Size(514, 286);
+            this.btnAddMember.Size = new System.Drawing.Size(240, 116);
             this.btnAddMember.TabIndex = 1;
             this.btnAddMember.Text = "Add Member";
             this.btnAddMember.UseVisualStyleBackColor = true;
@@ -58,13 +56,12 @@
             // 
             // MainForm
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(15F, 37F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1875, 1428);
+            this.ClientSize = new System.Drawing.Size(814, 327);
             this.Controls.Add(this.btnAddMember);
             this.Controls.Add(this.btnMembers);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
-            this.Margin = new System.Windows.Forms.Padding(6, 7, 6, 7);
             this.MaximizeBox = false;
             this.MinimizeBox = false;
             this.Name = "MainForm";
