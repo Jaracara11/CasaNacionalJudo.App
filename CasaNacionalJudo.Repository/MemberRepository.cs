@@ -20,7 +20,7 @@ namespace CasaNacionalJudo.Repository
 
         public static IEnumerable<Member> GetMemberByName(string memberName)
         {
-            var query = $"SELECT * FROM members WHERE firstName OR lastName LIKE '%{memberName}%'";
+            var query = $"SELECT * FROM members WHERE firstName like '%{memberName}%' or lastName like '%{memberName}%';";
 
             using var conn = new SqliteConnection(DbConnection.DbConn);
 

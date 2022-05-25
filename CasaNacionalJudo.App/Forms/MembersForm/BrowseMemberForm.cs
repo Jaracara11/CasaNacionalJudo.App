@@ -51,9 +51,11 @@ namespace CasaNacionalJudo.App
             
             if (dgvMembers.RowCount == 0)
             {
-                FormHelper.InfoDialog($"{tbSearchByName.Text} Not Found!", "Search Member");
+                FormHelper.InfoDialog($"Member {tbSearchByName.Text} Not Found!", "Search Member");
                 LoadMembers();
             }
+
+            tbSearchByName.Text = "";
         }
 
         private void btnReloadData_Click(object sender, EventArgs e)
