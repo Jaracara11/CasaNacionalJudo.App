@@ -1,7 +1,6 @@
 ﻿using CasaNacionalJudo.Core;
 using CasaNacionalJudo.Repository;
 using CasaNacionalJudo.Service;
-using System.Globalization;
 
 namespace CasaNacionalJudo.App.Forms.MembersForm
 {

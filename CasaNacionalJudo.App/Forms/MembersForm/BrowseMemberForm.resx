@@ -57,6 +57,26 @@
   <resheader name="writer">
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
+  <assembly alias="System.Drawing" name="System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
+  <data name="btnExportExcel.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+    <value>
+        iVBORw0KGgoAAAANSUhEUgAAACAAAAAgCAYAAABzenr0AAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8
+        YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAALpSURBVFhHzdZbqExRHMfxcU+UawmZB0m5JMQT8uCckVt5
+        UvKmPBCZcwhFiAcpQol4kFsKuZMkPBDlTYkkkbviyYP75fvbs35jNZlj9syczK5Pa699+//3uuy9Mg2x
+        ZVuarQM6tjPFSOI1zhZl1QNjMaad6NmKkcQM4ZMEOoWDk/ELP0JZT37mFCQxQ/h/JvAz1L/jW6B9n69U
+        6gQcUAnED7KveIFLeBgd030xJ1x1C2j/LW7jAFoxHUPh/twDXatgvq9UqgTkKGZgNHpmW5p0HrlMNq99
+        yj/37cQtnMDF4AzO4hzuwc+tOIF54VjnUGqmaF90vea079uAqRiGwRiIEVDy3TAJfq5iJDFD+LIJzA/H
+        usLBVXpf51zuhe/Tm6v1XF8DJeJ6xQkUW2BIobklJODuKN63HddxHiuxDBqcVzAb41B1AgraHYvQH4Ow
+        HwOg87INF3AMS6Frj+MUcqgpATfzE+SxHpp2OtYllHEXKOjhqL4aI6N66gQ0iFQuwXO8QTw+VG7BJizH
+        TDRB03UVRmEiqk7Ab9kPH/EUDlyuBQ5F9ZpbwMEmQF+6D9BHSMecwA7cwTWshd7+Bm5iLvQTqjmBy1Df
+        XsW+cMzdo0F4GgexGAtxBBqU0zAeVScgGvmvMRw6rpZQl/h83AVKpK6DUOfU1Hz3c5qSahE1ae/CJzm5
+        RoNwMzRLZqEZK6Dg+gjVNAg9DSV8iIp1n/PPSE5CXeG6Z4LrFSfgqaZ+9npOdfHazgnswmPcx1ZsxAM8
+        wgJoNZQ6gXItoLroHp/TyNdPyNdLnKB+36kT0O91HZSI3qAXdE1BPikdYDc+4RleRl5BHy9N3VQJxAsS
+        0aroPe5CI1yDSz8ZjW7dl2ZBUnECWkZ5iVVuWabr9NbvovrfeF2pa9pMwAsHr+NiOqaEPgdf4IeqLL2+
+        lFtHMcomUK4L6qHNFvDc7oM50B9NH5R60jP17L5IYobwDbCFjNwS6o725NYO0f/rlsn8BpvvLIbu0WKq
+        AAAAAElFTkSuQmCC
+</value>
+  </data>
   <metadata name="$this.Locked" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
     <value>True</value>
   </metadata>
