@@ -61,6 +61,28 @@ namespace CasaNacionalJudo.App.Forms.MembersForm
             }
         }
 
+        private void btnDeleteMember_Click(object sender, EventArgs e)
+        {
+            var alertTitle = "DELETE Member";
+            var memberName = $"{_member.FirstName} {_member.LastName}";
+
+
+            if (FormHelper.ConfirmDialog($"Are you sure you want to delete the member " +
+                        $"{memberName}'?", alertTitle) == true)
+            {
+                if (FormHelper.ConfirmDialog($"Please confirm the delete action.", alertTitle) == true)
+                {
+                    MemberRepository.DeleteMember(_member.MemberId);
+
+                    FormHelper.InfoDialog($"{memberName} has been deleted!", alertTitle);
+
+                    Close();
+                    BrowseMemberForm browseMemberFrm = new();
+                    browseMemberFrm.Show();
+                }
+            }
+        }
+
         #region Utilities
         private void LoadMemberData()
         {

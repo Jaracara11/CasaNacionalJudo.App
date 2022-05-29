@@ -58,6 +58,7 @@
             this.label14 = new System.Windows.Forms.Label();
             this.tbSignUpDate = new System.Windows.Forms.TextBox();
             this.tbTotalAmountDue = new System.Windows.Forms.NumericUpDown();
+            this.btnDeleteMember = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.tbMonthlyFee)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.tbAnualFee)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.tbTotalAmountDue)).BeginInit();
@@ -344,11 +345,27 @@
             this.tbTotalAmountDue.Size = new System.Drawing.Size(159, 25);
             this.tbTotalAmountDue.TabIndex = 29;
             // 
+            // btnDeleteMember
+            // 
+            this.btnDeleteMember.BackColor = System.Drawing.Color.IndianRed;
+            this.btnDeleteMember.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
+            this.btnDeleteMember.Font = new System.Drawing.Font("Segoe UI Semibold", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.btnDeleteMember.Location = new System.Drawing.Point(250, 454);
+            this.btnDeleteMember.Name = "btnDeleteMember";
+            this.btnDeleteMember.Size = new System.Drawing.Size(109, 41);
+            this.btnDeleteMember.TabIndex = 34;
+            this.btnDeleteMember.Text = "Delete Member";
+            this.btnDeleteMember.UseVisualStyleBackColor = false;
+            this.btnDeleteMember.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnDeleteMember.FlatAppearance.BorderSize = 0;
+            this.btnDeleteMember.Click += new System.EventHandler(this.btnDeleteMember_Click);
+            // 
             // EditMemberForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(553, 507);
+            this.Controls.Add(this.btnDeleteMember);
             this.Controls.Add(this.tbSignUpDate);
             this.Controls.Add(this.label14);
             this.Controls.Add(this.label13);
@@ -425,5 +442,6 @@
         private Label label14;
         private TextBox tbSignUpDate;
         private NumericUpDown tbTotalAmountDue;
+        private Button btnDeleteMember;
     }
 }

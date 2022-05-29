@@ -80,5 +80,13 @@ namespace CasaNacionalJudo.Repository
 
             conn.Execute(query, parameters);
         }
+
+        public static void DeleteMember(int id)
+        {
+            using var conn = new SqliteConnection(DbConnection.DbConn);
+
+            var query = "DELETE FROM members WHERE memberId = @id;";
+            var result = conn.Execute(query, new { id });
+        }
     }
 }
